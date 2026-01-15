@@ -2,15 +2,25 @@
 
 A new Flutter project.
 
-## Getting Started
+## Penjelasan Arsitektur
 
-This project is a starting point for a Flutter application.
+1. Clean Architecture
 
-A few resources to get you started if this is your first Flutter project:
+Models: Representasi data (JournalModel)
+Services: Layer untuk komunikasi dengan external services (SupabaseService)
+Providers: State management dan business logic (JournalProvider)
+UI: Tampilan aplikasi (Screens & Widgets)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. State Management dengan Riverpod
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+StateNotifierProvider untuk mengelola state kompleks
+Immutable state updates menggunakan copyWith
+Reactive UI yang otomatis rebuild saat state berubah
+
+3. Design Pattern
+
+Repository Pattern: firebase bertindak sebagai repository
+Provider Pattern: Dependency injection menggunakan Riverpod
+Observer Pattern: UI observe perubahan state dari provider
+
+
