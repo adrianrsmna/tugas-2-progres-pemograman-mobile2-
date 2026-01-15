@@ -7,7 +7,7 @@ A new Flutter project.
 1. Clean Architecture
 
 Models: Representasi data (JournalModel)
-Services: Layer untuk komunikasi dengan external services (SupabaseService)
+Services: Layer untuk komunikasi dengan external services (FirebaseService)
 Providers: State management dan business logic (JournalProvider)
 UI: Tampilan aplikasi (Screens & Widgets)
 
